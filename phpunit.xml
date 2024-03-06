@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<phpunit
+        bootstrap="vendor/autoload.php"
+        colors="true"
+>
+  <testsuites>
+    <testsuite name="My Test Suite">
+      <directory>tests</directory>
+    </testsuite>
+  </testsuites>
+
+  <php>
+    <ini name="xdebug.remote_enable" value="1"/>
+    <ini name="xdebug.remote_autostart" value="1"/>
+    <ini name="xdebug.remote_port" value="9000"/>
+  </php>
+
+  <filter>
+    <whitelist>
+      <directory suffix=".php">src</directory>
+    </whitelist>
+  </filter>
+
+</phpunit>
